@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:18:32 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/17 19:09:19 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 20:22:39 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ private:
 public:
 
 	Contact addContact(void);
-    void    getContact(Contact contact);
+    void    getfullcontact(Contact contact);
     void    getcontactList(Contact contact);
     int     isEmpty(Contact contact);
 

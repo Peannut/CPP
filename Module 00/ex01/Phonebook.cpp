@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:15:06 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/17 19:43:39 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 20:22:53 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,15 @@ void    Phonebook::contactSelection()
     getline(std::cin, this->selectioninput);
     if (idFinder(this->selectioninput))
     {
-        if (this->contactlist)
+        if (this->contactlist->isEmpty(this->contactlist[std::stoi(this->selectioninput)]))
+        {
+            std::cout << "This Contact does not exit" << std::endl;
+        }
+        else
+            this->contactlist->getfullcontact(this->contactlist[std::stoi((this->selectioninput))]);
     }
     else
     {
-        
+        contactSelection();
     }
 }
