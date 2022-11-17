@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:15:06 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/17 12:23:20 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:43:39 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,36 @@ void Phonebook::contactSearch() {
     while(i <= 7)
     {
         std::cout << i << "      |";
-        this->contactlist[i].getContact(this->contactlist[i]);
+        this->contactlist[i].getcontactList(this->contactlist[i]);
         i++;
+    }
+    this->contactSelection();
+}
+
+int Phonebook::idFinder(std::string selectioninput)
+{ 
+    int i;
+    std::string str;
+    i = 0;
+    while(i < 8)
+    {
+        str = std::to_string(i);
+        if (selectioninput.compare(str) == 0)
+            return (1);
+        i++;
+    }
+    return (0);
+}
+void    Phonebook::contactSelection()
+{
+    std::cout << "Select contact ID" << std::endl;
+    getline(std::cin, this->selectioninput);
+    if (idFinder(this->selectioninput))
+    {
+        if (this->contactlist)
+    }
+    else
+    {
+        
     }
 }

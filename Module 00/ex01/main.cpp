@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:44:32 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/17 12:23:01 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:12:40 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ int main(void)
 		}
 		else if (book.input.compare("SEARCH") == 0)
 		{
-			book.searchContact();
-			;
+			book.contactSearch();
 		}
 		else if (book.input.compare("EXIT") == 0)
 			std::cout << "Good BYE FRIEND" << std::endl;

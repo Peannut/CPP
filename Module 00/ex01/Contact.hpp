@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:18:32 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/17 12:48:33 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:09:19 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 	std::string nickname;
 	std::string phone_number;
 	std::string darkest_secret;
-	std::string formatContact(std::string str);
+	std::string contactformat(std::string str);
 
 public:
 
