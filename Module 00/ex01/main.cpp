@@ -6,28 +6,39 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:44:32 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/09 20:00:46 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 12:23:01 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include "Phonebook.hpp"
 
 int main(void)
 {
-	std::string	buffer;
-	while(42)
+	Phonebook book;
+	
+	while (book.input.compare("EXIT"))	
 	{
 		
-		std::getline (std::cin, buffer);
+		std::cout << "Phonebook :" << "\n";
+		getline(std::cin, book.input);
 		if (std::cin.eof ())
 			exit(1);
-		if (buffer == "ADD")
-			std::cout << "yo" << std::endl;
-		if (buffer == "EXIT")
-			exit(1);
-		if (buffer == "SEARCH")
+		if (book.input.compare("ADD") == 0)
+		{
+			book.contactFill();
+		}
+		else if (book.input.compare("SEARCH") == 0)
+		{
+			book.searchContact();
 			;
-		std::cout << buffer << std::endl;
+		}
+		else if (book.input.compare("EXIT") == 0)
+			std::cout << "Good BYE FRIEND" << std::endl;
+		else
+			std::cout << "The program only accepts ADD, SEARCH and EXIT" << std::endl;
+		
 	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:18:32 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/09 20:26:07 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 12:48:33 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <string.h>
 #include <iostream>
+#include <iomanip> 
 
 class Contact
 {
@@ -24,19 +25,15 @@ private:
 	std::string last_name;
 	std::string nickname;
 	std::string phone_number;
-	std::string favorite_meal;
 	std::string darkest_secret;
-
+	std::string formatContact(std::string str);
 
 public:
-	Contact(void);
-	~Contact();
-	std::string	Contact::getfirst_name(void);
-	std::string	Contact::getlast_name(void);
-	std::string	Contact::getnickname(void);
-	std::string	Contact::getphonenumber(void);
-	std::string	Contact::getfav_meal(void);
-	std::string	Contact::getdarkest_secret(void);
+
+	Contact addContact(void);
+    void    getContact(Contact contact);
+    void    getcontactList(Contact contact);
+    int     isEmpty(Contact contact);
 
 };
 

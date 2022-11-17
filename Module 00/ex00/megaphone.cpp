@@ -6,12 +6,11 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:32:24 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/10 17:44:49 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/17 08:27:08 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
 
 void	megaphone(int ac, char **av)
 {

@@ -6,7 +6,7 @@
 #    By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 11:44:23 by zoukaddo          #+#    #+#              #
-#    Updated: 2022/11/04 15:59:48 by zoukaddo         ###   ########.fr        #
+#    Updated: 2022/11/17 09:55:37 by zoukaddo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS =  -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -rf
 
-SRC		= main.cpp
+SRC		= main.cpp Contact.cpp Phonebook.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 
