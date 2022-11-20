@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 11:32:24 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/19 20:10:51 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/11/20 08:51:52 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/11/20 09:49:05 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-void	megaphone(int ac, char **av)
+void	Zombie::setName(std::string name)
 {
-	int	i;
-	int	j;
-
-	i = 1;
-	while (i < ac)
-	{
-		j = 0;
-		while (j < (int)strlen(av[i]))
-		{
-			std::cout << (char)std::toupper(av[i][j]);
-			j++;
-		}
-		i++;
-		if (i < ac)
-			std::cout << " ";
-	}
-	std::cout << std::endl;
+	this->name = name;
 }
 
-int	main(int ac, char **av)
+Zombie* zombieHorde( int N, std::string name )
 {
-	if (ac > 1)
-		megaphone(ac, av);
-	else
-		std::cout << "LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	return (0);
+	int i;
+	i = 0;
+
+	Zombie* instance = new Zombie[N];
+
+	while(i < N)
+	{
+		instance[i].setName(name);
+		i++;
+	}
+	return (instance);
 }

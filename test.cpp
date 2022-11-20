@@ -21,9 +21,10 @@ int main()
 {
 	// ziko a;
 	// ziko b;
-
-	// std::cout << a << std::endl;
-	std::cout << std::setw(10);
-	std::cout << "hjjjjjjjhnb";
-
+	std::string str1 = "abcdef";
+	std::cout << str1.length() << std::endl;
+	str1.replace(2,3,"V");
+	std::cout << str1 << std::endl;
+	
+	// std::cout << std::left << std::setfill('0') << std::setw(10) << "hello" << std::endl;
 }

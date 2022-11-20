@@ -60,6 +60,10 @@
 		"optional": "cpp",
 		"sstream": "cpp",
 		"unordered_map": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"deque": "cpp",
+		"fstream": "cpp",
+		"stack": "cpp",
+		"__functional_03": "cpp"
 	}
 }

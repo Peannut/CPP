@@ -5,32 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 11:44:32 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/19 11:36:55 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/11/20 10:59:24 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/11/20 13:38:36 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "Phonebook.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int main(void)
+int main()
 {
-	Phonebook book;
-	
-	while (book.input.compare("EXIT"))	
 	{
-		std::cout << "The program only accepts ADD, SEARCH and EXIT" << std::endl;
-		std::cout << "Phonebook :" << std::endl;
-		getline(std::cin, book.input);
-		if (std::cin.eof ())
-			exit(1);
-		if (book.input.compare("ADD") == 0)
-			book.contactFill();
-		else if (book.input.compare("SEARCH") == 0)
-			book.contactSearch();
-		else if (book.input.compare("EXIT") == 0)
-			std::cout << "Good BYE FRIEND" << std::endl;
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
 	}
-	return (0);
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
 }

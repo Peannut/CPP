@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 11:32:24 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/19 20:10:51 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/11/20 10:59:46 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/11/20 13:37:39 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef _WEAPON_HPP_
+# define _WEAPON_HPP_
 #include <iostream>
 
-void	megaphone(int ac, char **av)
+class Weapon
 {
-	int	i;
-	int	j;
+	private:
+    	std::string _type;
 
-	i = 1;
-	while (i < ac)
-	{
-		j = 0;
-		while (j < (int)strlen(av[i]))
-		{
-			std::cout << (char)std::toupper(av[i][j]);
-			j++;
-		}
-		i++;
-		if (i < ac)
-			std::cout << " ";
-	}
-	std::cout << std::endl;
-}
+	public:
+    	std::string const &getType(void);
+    	void    setType(std::string const &newType);
+    	Weapon(std::string const &type);
+    	~Weapon();
+};
 
-int	main(int ac, char **av)
-{
-	if (ac > 1)
-		megaphone(ac, av);
-	else
-		std::cout << "LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	return (0);
-}
+
+#endif
