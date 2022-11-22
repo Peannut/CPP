@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:59:44 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/20 13:37:16 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/21 16:44:04 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,4 @@ void    Weapon::setType(std::string const &newType) {
 
 Weapon::Weapon(std::string const &type) : _type(type) { }
 
-Weapon::~Weapon()
-{
-}
+Weapon::~Weapon() {	}
