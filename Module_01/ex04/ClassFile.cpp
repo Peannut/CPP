@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:38:56 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/22 11:37:36 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/24 08:43:13 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int ClassFile::check(void)
 {
 	if (_file.fail())
 		return (ClassFile::error("File failed"));
-	if (_file.peek() == std::ifstream::traits_type::eof())
+	if (_file.peek() == EOF)
 		return (ClassFile::error("Empty File"));
 	return (0);
 }
