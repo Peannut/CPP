@@ -6,13 +6,13 @@
 #    By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/18 11:00:30 by zoukaddo          #+#    #+#              #
-#    Updated: 2022/11/23 09:49:11 by zoukaddo         ###   ########.fr        #
+#    Updated: 2022/11/25 10:33:26 by zoukaddo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombie
 
-CPPFLAGS =  -Wall -Wextra -Werror -std=c++98
+CPPFLAGS =  -Wall -Wextra -Werror -std=c++98 -g
 
 RM		= rm -rf
 

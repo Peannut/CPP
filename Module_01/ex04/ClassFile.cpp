@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:38:56 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/24 08:43:13 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:02:18 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int ClassFile::error(std::string str) {
 ClassFile::ClassFile(std::string file, std::string s1, std::string s2)
 {
 	_file.open(file);
-	_filename = file;	
+	_filename = file;
 	_s1 = s1;
 	_s2 = s2;
 }
@@ -39,12 +39,12 @@ void	ClassFile::linemodif(void)
 	size_t first;
 
 	first = _fileContent.find(_s1);
-	if (first != SIZE_MAX)
+	if (first != std::string::npos)
 	{
 		_fileContent.erase(first, _s1.length());
 		_fileContent.insert(first, _s2);
 	}
-	if (_fileContent.find(_s1) != SIZE_MAX)
+	if (_fileContent.find(_s1) != std::string::npos)
 		linemodif();
 }
 

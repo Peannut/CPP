@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 10:59:10 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/20 08:50:11 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:44:32 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int main()
     instance.randomChump("Zombie2");
 
     instanc2 = instanc2->newZombie("Zombie3");
-
     instanc2->announce();
     delete instanc2;
 }
