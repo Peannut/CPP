@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:21:55 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/26 19:40:31 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/11/27 16:36:45 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Fixed::~Fixed()
 
 
 
-int Fixed::getRawBits(void) const 
+int Fixed::getRawBits(void) const
 {
     std::cout << "getRawBits member function called" <<std::endl;
     return (fixed_points);
