@@ -65,6 +65,8 @@
 		"fstream": "cpp",
 		"stack": "cpp",
 		"__functional_03": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"*.tcc": "cpp",
+		"clocale": "cpp"
 	}
 }

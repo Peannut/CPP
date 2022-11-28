@@ -1,30 +1,47 @@
 #include <iostream>
 #include <iomanip>
 
-struct ziko
+class ziko
 {
-	ziko() {}
+	int _var;
+	public:
+		ziko() {}
 
-	void	operator+(ziko& b)
-	{
-		std::cout << "YEAAAH" << '\n';
-	}
+		ziko(int val): _var{val}{}
+		ziko operator=(const ziko& rhs){
+			_var = rhs._var;
+			return *this;
+		}
+		void print()
+		{
+			std::cout << _var << std::endl;
+		}
 };
 
-std::ostream&	operator<<(std::ostream& out, ziko& obj)
-{
-	out << "hello";
-	return (out);
-}
+// std::ostream&	operator<<(std::ostream& out, ziko& obj)
+// {
+// 	out << "hello";
+// 	return (out);
+// }
 
 int main()
 {
 	// ziko a;
 	// ziko b;
-	std::string str1 = "abcdef";
-	std::cout << str1.length() << std::endl;
-	str1.replace(2,3,"V");
-	std::cout << str1 << std::endl;
+	// std::string str1 = "abcdef";
+	// std::cout << str1.length() << std::endl;
+	// str1.replace(2,3,"V");
+	// std::cout << str1 << std::endl;
+	int a = 10, b, c = 2;
+	(b = c) = a;
+	std::cout << "B:"<< b << std::endl;
+	std::cout << "C:"<< c << std::endl;
+	ziko b1(10);
+	ziko b2, b3, b4;
+	(b2 = b3) = b4 = b1;
+	b1.print(); b2.print(); b3.print(); b4.print();
+	return (0);
 	
 	// std::cout << std::left << std::setfill('0') << std::setw(10) << "hello" << std::endl;
 }
+
