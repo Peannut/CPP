@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:21:57 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/11/27 17:31:54 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/01 20:25:18 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@ class Fixed
     public:
         Fixed();
         ~Fixed();
+        Fixed(const Fixed &copy);
+        Fixed& operator=(Fixed const &other);
         int getRawBits(void) const;
         void setRawBits(int const raw);
-        Fixed& operator=(Fixed const &other);
-        Fixed(const Fixed &copy);
-
 };
 
 
