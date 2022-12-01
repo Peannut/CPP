@@ -12,11 +12,13 @@ Fixed::Fixed(const Fixed &copy) {
 Fixed::Fixed(int const &copy) {
     std::cout << "Int constructor called" << std::endl;
     this->fixed_points = copy << fractional_bits;
+    std::cout << "int value:" << this->fixed_points << std::endl;
 }
 
 Fixed::Fixed(const float &copy) {
     std::cout << "Float constructor called" << std::endl;
     this->fixed_points = (int)roundf(copy * (1 << Fixed::fractional_bits));
+    std::cout << "float value:" << this->fixed_points << std::endl;
 }
 
 Fixed& Fixed::operator=(Fixed const &other) {
