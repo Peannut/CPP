@@ -46,7 +46,8 @@ float Fixed::toFloat() const {
     return ((float) getRawBits() / (float) (1 << fractional_bits));
 }
 
-int Fixed::toInt() const {
+int Fixed::toInt() const 
+{
 
     return (fixed_points >> fractional_bits);
 }

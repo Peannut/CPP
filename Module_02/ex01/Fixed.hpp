@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 18:11:33 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/01 22:05:27 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:31:35 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ class Fixed
         Fixed(const Fixed &copy);
         Fixed(int const &copy);
         Fixed(const float &copy);
+        float toFloat( void ) const;
+        int   toInt( void ) const;
 
 };
+std::ostream& operator<<(std::ostream& os, Fixed const &other);
 
 
 #endif
