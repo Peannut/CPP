@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "name": "(lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/Fixed",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/zoukaddo/Desktop/cpp/Module_02/ex01",
+      "program": "/Users/zoukaddo/Desktop/cpp/Module_02/ex01/build/Debug/outDebug"
+    }
+  ]
+}
