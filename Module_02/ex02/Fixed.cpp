@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:23:00 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/05 19:53:09 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/09 16:25:12 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,13 @@ Fixed::Fixed(const float &copy)
     std::cout << "Float constructor called" << std::endl;
     this->fixed_points = (int)roundf(copy * (1 << Fixed::fractional_bits));
 }
+
+Fixed& Fixed::operator=(Fixed const &other) {
+    std::cout << "Assigment constructor called" << std::endl;
+    this->fixed_points = other.getRawBits();
+    return (*this);
+}
+
 
 int    Fixed::getRawBits( void ) const
 {
@@ -84,16 +91,37 @@ float   Fixed::operator+(Fixed const &obj) const {
     return (this->toFloat() + obj.toFloat());
 }
 
-float   Fixed::operator-(Fixed const &obj) const {
-    return (this->toFloat() - obj.toFloat());
+// float   Fixed::operator-(Fixed const &obj) const {
+//     return (this->toFloat() - obj.toFloat());
+// }
+Fixed	Fixed::operator-(const Fixed& obj)
+{
+	Fixed res;
+
+	res.setRawBits(getRawBits() - obj.getRawBits());
+	return (res);
+}
+// float   Fixed::operator*(Fixed const &obj) const {
+//     return (this->toFloat() * obj.toFloat());
+// }
+Fixed   Fixed::operator*(Fixed const &obj) const {
+    Fixed res;
+	
+    res.fixed_points = (fixed_points * fixed_points) / (1 << fractional_bits);
+	return (res);
 }
 
-float   Fixed::operator*(Fixed const &obj) const {
-    return (this->toFloat() * obj.toFloat());
-}
+// float   Fixed::operator/(Fixed const &obj) const {
+//     return (this->toFloat() / obj.toFloat());
+// }
 
-float   Fixed::operator/(Fixed const &obj) const {
-    return (this->toFloat() / obj.toFloat());
+Fixed	Fixed::operator/(Fixed const &obj) const
+{
+	Fixed res;
+
+    res.fixed_points = (fixed_points / fixed_points) * (1 << fractional_bits);
+	// res.fixed_num = (fixed_num / fixed_num) * (1 << frac_bits);
+	return (res);
 }
 
 Fixed& Fixed::operator++() {
