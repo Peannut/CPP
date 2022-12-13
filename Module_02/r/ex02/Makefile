@@ -2,7 +2,7 @@ NAME = Fixed
 
 SRC = Fixed.cpp main.cpp
 
-FLAGS = -std=c++98 -Wall -Wextra -Werror
+FLAGS = -std=c++98 -Wall -Wextra -Werror -g
 
 OBJS = $(SRC:.cpp=.o)
 

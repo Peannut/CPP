@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nelidris <nelidris@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 18:37:42 by nelidris          #+#    #+#             */
-/*   Updated: 2022/11/01 13:40:47 by nelidris         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:04:10 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,6 @@ Fixed	Fixed::operator++()
 
 Fixed	Fixed::operator--()
 {
-	
 	setRawBits(getRawBits() - 1);
 	return (*this);
 }
