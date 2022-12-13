@@ -6,14 +6,14 @@
 #    By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 09:23:06 by zoukaddo          #+#    #+#              #
-#    Updated: 2022/12/05 19:50:11 by zoukaddo         ###   ########.fr        #
+#    Updated: 2022/12/13 21:58:29 by zoukaddo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = Fixed
 
-CPPFLAGS =  -Wall -Wextra -Werror -std=c++98 -g
+CPPFLAGS =  -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -rf
 
@@ -24,7 +24,7 @@ OBJS	= $(SRC:.cpp=.o)
 all : $(NAME)
 
 $(NAME) :	$(OBJS)
-			c++ $(CPPFLAGS) $(OBJS) -o $(NAME)
+			c++ -g $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 
 clean:

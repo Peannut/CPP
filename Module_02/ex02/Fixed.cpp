@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:23:00 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/13 19:35:17 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/13 22:06:07 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ Fixed::Fixed(const Fixed& obj)
     // std::cout << "Copy assignment operator" << std::endl;
     *this  = obj;
 }
+
 Fixed& Fixed::operator=(const Fixed& obj)
 {
     fixed_points = obj.getRawBits();
@@ -47,7 +48,6 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits( void ) const 
 {
-    // std::cout << "getRawBits member function called" << std::endl;
     return (fixed_points);
 }
 void    Fixed::setRawBits( int const raw )
@@ -113,20 +113,6 @@ Fixed   Fixed::operator-(const Fixed& obj)
     return (r);
 }
 
-// Fixed   Fixed::operator*(const Fixed& obj)
-// {
-//     Fixed r;
-//     r.fixed_points = (fixed_points * fixed_points) / (1 << fractional_bits);
-//     return (r);
-// }
-
-// Fixed   Fixed::operator/(const Fixed& obj)
-// {
-//     Fixed r;
-//     r.fixed_points = (fixed_points * fixed_points) * (1 << fractional_bits);
-//     return (r); 
-// }
-
 Fixed	Fixed::operator*( const Fixed &obj )
 {
 	return (Fixed(obj.toFloat() * this->toFloat()));
@@ -137,7 +123,7 @@ Fixed	Fixed::operator/( const Fixed &obj )
 	return (Fixed(obj.toFloat() / this->toFloat()));
 }
 
-/**********--I**I++ AND I--**--I*********/
+/**********post increment and pre increment *********/
 
 Fixed& Fixed::operator++() {
     ++this->fixed_points;
@@ -193,6 +179,6 @@ Fixed&	Fixed::max(Fixed& a, Fixed& b)
 
 std::ostream& operator<<(std::ostream& out, const Fixed& obj)
 {
-	std::cout << obj.toFloat();
+	out << obj.toFloat();
 	return (out);
 }
