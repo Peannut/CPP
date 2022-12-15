@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:45:12 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/11 19:47:33 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/15 18:21:58 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@
 
 class Dog : public Animal
 {
-	
+		Dog();
+		Dog(const Dog& copy);
+		Dog& operator=(const Dog& copy);
+		~Dog();
 	
 };
 
