@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:45:23 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/11 20:44:05 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/17 12:19:50 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Cat::~Cat()
 	std::cout << "Cat Destructor " << std::endl;
 }
 
-void	Cat::makeSound(void) const
+void	Cat::makeSound(void)	const
 {
 	std::cout << "Meow " << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:03:32 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/11 19:53:17 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/17 12:48:54 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-	type = "IDK";
+	type = "not defined";
 	std::cout << "Animal Default Constructor " << std::endl;
 }
 
@@ -36,8 +36,8 @@ Animal::~Animal()
 	std::cout << "Animal Destructor" << std::endl;
 }
 
-void	Animal::makeSound(void) {
-	std::cout << "??" << std::endl;
+void	Animal::makeSound(void) const{
+	std::cout << "Some noise" << std::endl;
 }
 
 const std::string& Animal::getType() const{

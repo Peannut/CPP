@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:03:30 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/11 19:47:41 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/17 12:20:08 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal
 		~Animal();
 
 		const std::string& getType() const;
-		void	makeSound(void);
+		virtual	void	makeSound(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:45:12 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/15 18:21:58 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/17 12:19:42 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 
 class Dog : public Animal
 {
+	public:___POSIX_C_DEPRECATED_STARTING_198808L
 		Dog();
 		Dog(const Dog& copy);
 		Dog& operator=(const Dog& copy);
 		~Dog();
-	
+		virtual	void	makeSound(void)	const;
 };
 
 #endif 
