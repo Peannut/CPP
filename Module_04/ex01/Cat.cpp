@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 15:09:17 by nelidris          #+#    #+#             */
-/*   Updated: 2022/12/18 14:15:32 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/11 19:45:23 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/18 15:26:43 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog()
+Cat::Cat()
 {
-	type = "Dog";
+	type = "Cat";
 	brain = new Brain();
-	std::cout << "[ Dog Default Constructor ]" << std::endl;
+	std::cout << "Cat Default Constructor" << std::endl;
 }
 
-Dog::Dog(const Dog& copy)
+Cat::Cat(const Cat& copy)
 {
 	type = copy.type;
 	brain = new Brain();
 	*brain = *copy.brain;
-	std::cout << "[ Dog Copy Constructor ]" << std::endl;
+	std::cout << "Cat Copy Constructor" << std::endl;
 }
 
-Dog& Dog::operator=(const Dog& copy)
+Cat& Cat::operator=(const Cat& copy)
 {
 	type = copy.type;
 	if (brain)
 		delete brain;
 	brain = new Brain();
 	*brain = *copy.brain;
-	std::cout << "[ Dog Copy Assignment Constructor ]" << std::endl;
+	std::cout << "Cat Copy Assignment Operator" << std::endl;
 	return (*this);
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
 	delete brain;
-	std::cout << "[ Dog Destructor ]" << std::endl;
+	std::cout << "Cat Destructor " << std::endl;
 }
 
-void	Dog::makeSound(void) const
+void	Cat::makeSound(void)	const
 {
-	std::cout << "Bark..." << std::endl;
+	std::cout << "Meow " << std::endl;
 }

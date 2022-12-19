@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 19:45:14 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/18 17:15:11 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/09/29 11:30:07 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/29 11:35:59 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,29 @@
 
 Dog::Dog()
 {
-	type = "Dog";
-	std::cout << "Dog Default Constructor" << std::endl;
+	std::cout << "Default Dog constructor called" << std::endl;
+	_type = "Dog";
 }
 
-Dog::Dog(const Dog& copy)
+Dog::Dog(const Dog& obj)
 {
-	type = copy.type;
-	std::cout << "Dog Copy Constructor" << std::endl;
+	std::cout << "Dog Copy constructor called" << std::endl;
+	*this = obj;
 }
 
-Dog& Dog::operator=(const Dog& copy)
+Dog& Dog::operator=(const Dog& obj)
 {
-	type = copy.type;
-	std::cout << "Dog Copy Assignment Operator" << std::endl;
+	std::cout << "Dog Copy assignment operator called" << std::endl;
+	_type = obj._type;
 	return (*this);
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "Woof Woof" << std::endl;
 }
 
 Dog::~Dog()
 {
-	std::cout << "Dog Destructor " << std::endl;
-}
-
-
-void	Dog::makeSound(void)	const
-{
-	std::cout << "Bark " << std::endl;
+	std::cout << "Dog Destructor called" << std::endl;
 }
