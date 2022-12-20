@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 17:32:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/20 16:23:17 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/20 10:18:20 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/20 11:07:07 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef _ROBOTOMYREQUESTFORM_HPP_
+# define _ROBOTOMYREQUESTFORM_HPP_
+
+#include <iostream>
 #include "Form.hpp"
 
-int main(void)
+class RobotomyRequestForm : public Form
 {
-	try
-	{
-		Bureaucrat bureaucrat("zakaria", 42);
-		Form form("form", 42, 11);
+	public:
+		RobotomyRequestForm();
+		RobotomyRequestForm(const std::string& target);
+		RobotomyRequestForm(RobotomyRequestForm&);
+		RobotomyRequestForm& operator=(RobotomyRequestForm&);
+		~RobotomyRequestForm();
 
-		bureaucrat.signForm(form);
-		form.beSigned(bureaucrat);
-		// std::cout << form << std::endl;
-	}
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return (0);
-}
+		void	formTask() const;
+};
+
+#endif 

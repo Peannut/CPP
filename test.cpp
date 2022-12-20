@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-
+#include <fstream>
 // class ziko
 // {
 // 	int _var;
@@ -45,8 +45,8 @@ int main()
 	int b = 3;
 	// // std::cout << std::left << std::setfill('0') << std::setw(10) << "hello" << std::endl;
 	// std::cout << (1 << 4) << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << ++b << std::endl;
-
+	// std::cout << a++ << std::endl;
+	// std::cout << ++b << std::endl;
+	std::ofstream p("ld");
 }
 

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 17:32:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/20 16:23:17 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/20 20:42:07 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/20 20:48:02 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#ifndef _INTERN_H_
+# define _INTERN_H_
 
-int main(void)
+# include <iostream>
+# include "Form.hpp"
+# include "PresidentialPardonForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "ShrubberyCreationForm.hpp"
+
+class Intern
 {
-	try
-	{
-		Bureaucrat bureaucrat("zakaria", 42);
-		Form form("form", 42, 11);
+	public:
+		Intern();
+		Intern(const Intern&);
+		Intern& operator=(const Intern&);
+		~Intern();
 
-		bureaucrat.signForm(form);
-		form.beSigned(bureaucrat);
-		// std::cout << form << std::endl;
-	}
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return (0);
-}
+		Form*	makeForm(const std::string&, const std::string&);
+		
+};
+
+#endif

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 17:32:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/20 16:23:17 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/20 08:54:02 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/20 11:26:48 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef _SHRUBBERYCREATIONFORM_HPP_
+# define _SHRUBBERYCREATIONFORM_HPP_
+
+
+#include <iostream>
 #include "Form.hpp"
 
-int main(void)
+class ShrubberyCreationForm : public Form
 {
-	try
-	{
-		Bureaucrat bureaucrat("zakaria", 42);
-		Form form("form", 42, 11);
+		
+	public:
+		ShrubberyCreationForm();
+		ShrubberyCreationForm(const std::string& target);
+		ShrubberyCreationForm(ShrubberyCreationForm&);
+		ShrubberyCreationForm& operator=(ShrubberyCreationForm&);
+		~ShrubberyCreationForm();
 
-		bureaucrat.signForm(form);
-		form.beSigned(bureaucrat);
-		// std::cout << form << std::endl;
-	}
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return (0);
-}
+		void	formTask() const;
+};
+
+
+#endif 
