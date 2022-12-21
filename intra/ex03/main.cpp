@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 17:32:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/20 20:58:59 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/21 11:02:55 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,42 +20,60 @@
 int main(void)
 {
 	{
-		Bureaucrat jonathan("Jonathan", 10);
-		Intern someRandomIntern;
-		Form* rrf;
-		rrf = someRandomIntern.makeForm("presidential pardon", "Dio");
-		if (rrf)
+		Bureaucrat	a("Director1", 2);
+		Intern		intern;
+		Form		*b;
+		
+		try
 		{
-			jonathan.signForm(*rrf);
-			rrf->execute(jonathan);
+			b = intern.makeForm("PresidentialPardonForm", "Jinx");
+			a.signForm(*b);
+			a.executeForm(*b);
 		}
-		delete rrf;
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+		delete b;
+		std::cout << std::endl;
 	}
-	std::cout << std::endl;
 	{
-		Bureaucrat joseph("Joseph", 10);
-		Intern someRandomIntern;
-		Form* rrf;
-		rrf = someRandomIntern.makeForm("robotomy request", "Kars");
-		if (rrf)
+		Bureaucrat	a("Director2", 140);
+		Intern		intern;
+		Form		*b;
+		
+		try
 		{
-			joseph.signForm(*rrf);
-			rrf->execute(joseph);
+			b = intern.makeForm("RobotomyRequestForm", "Thresh");
+			a.signForm(*b);
+			a.executeForm(*b);
 		}
-		delete rrf;
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+		delete b;
+		std::cout << std::endl;
 	}
-	std::cout << std::endl;
+	
 	{
-		Bureaucrat giorno("Giorno", 10);
-		Intern someRandomIntern;
-		Form* rrf;
-		rrf = someRandomIntern.makeForm("shrubbery creation", "Diavolo");
-		if (rrf)
+		Bureaucrat	a("Director3", 42);
+		Intern		intern;
+		Form		*b;
+		
+		try
 		{
-			giorno.signForm(*rrf);
-			rrf->execute(giorno);
+			b = intern.makeForm("ShrubberyCreationForm", "Katarina");
+			a.signForm(*b);
+			a.executeForm(*b);
 		}
-		delete rrf;
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+		delete b;
+		std::cout << std::endl;
 	}
+
 	return (0);
 }

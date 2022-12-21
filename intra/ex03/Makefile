@@ -6,11 +6,11 @@
 #    By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 05:17:43 by zoukaddo          #+#    #+#              #
-#    Updated: 2022/12/20 20:58:29 by zoukaddo         ###   ########.fr        #
+#    Updated: 2022/12/21 10:33:14 by zoukaddo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucrat
+NAME = Intern
 
 CPPFLAGS =  -Wall -Wextra -Werror -std=c++98 -g
 

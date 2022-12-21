@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 04:23:29 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/20 18:54:26 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2022/12/21 10:56:39 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,9 @@ void	Bureaucrat::executeForm(const Form &form) const
 	{
 		std::cerr << this->name << " was not able to execute Form: " << form.getName()
 		<< " because: "<< e.what() << std::endl;
+	}
+	catch (const std::string& error)
+	{
+		std::cerr << error << std::endl;
 	}
 }
