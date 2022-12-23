@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 09:23:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/21 13:19:35 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/22 12:06:21 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/22 12:23:28 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef _A_HPP_
+# define _A_HPP_
 
-int main( void )
+#include "Base.hpp"
+
+
+class A : public Base
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	
-	return 0;
-}
+
+};
+
+
+#endif 

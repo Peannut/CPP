@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 09:23:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/21 13:19:35 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/23 10:04:08 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/23 11:35:31 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef _ITER_HPP_
+# define _ITER_HPP_
 
-int main( void )
+#include <iostream>
+
+template <class T>
+void	iter(T* arr, int length, void (*fun)(T &arg))
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	
-	return 0;
+	int i = 0;
+	while (i < length)
+	{
+		fun(arr[i]);
+		i++;
+	}
 }
+
+template< class T >
+void print(T arg)
+{
+	std::cout << arg << std::endl;
+}
+
+#endif 

@@ -1,28 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   template.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 09:23:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/21 13:19:35 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/22 19:03:32 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/23 10:00:55 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef _TEMPLATE_HPP_
+# define _TEMPLATE_HPP_
 
-int main( void )
+#include <iostream>
+
+template <class T>
+void	swap(T& x, T& y)
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	
-	return 0;
+	T tmp;
+
+	tmp = x;
+	x = y;
+	y = tmp;
 }
+
+template <class T>
+T&	min(T& x, T& y)
+{
+	if (x < y)
+		return (x);
+	return (y);
+}
+
+template <class T>
+T&	max(T& x, T& y)
+{
+	if (x < y)
+		return (y);
+	return (x);
+}
+
+#endif 

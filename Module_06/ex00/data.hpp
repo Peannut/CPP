@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 09:23:04 by zoukaddo          #+#    #+#             */
-/*   Updated: 2022/12/21 13:19:35 by zoukaddo         ###   ########.fr       */
+/*   Created: 2022/12/21 15:31:15 by zoukaddo          #+#    #+#             */
+/*   Updated: 2022/12/21 15:34:35 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef _DATA_HPP_
+# define _DATA_HPP_
 
-int main( void )
+#include <iostream>
+
+# define ISCHARACTER 0
+# define ISINTEGER 1
+# define ISDOUBLE 2
+# define ISFLOAT 3
+# define ISUNDEFINED 4
+
+
+struct info
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	
-	return 0;
-}
+	int		type;
+	int		after_point;
+	char	character;
+	int		int_number;
+	float	float_number;
+	double	double_number;
+};
+
+#endif

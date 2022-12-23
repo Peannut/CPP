@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nelidris <nelidris@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 16:18:01 by nelidris          #+#    #+#             */
-/*   Updated: 2022/09/25 15:07:25 by nelidris         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:38:02 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,7 @@ class Array
 
 		int	size() const { return (_length); }
 		
-		T&	operator[](int idx) const {
-			if (idx < 0 || idx > _length - 1)
-				throw (OutOfBoundsException());
-			return (_arr[idx]);
-		}
+
 		
 		class OutOfBoundsException: public std::exception{
 			const char* what() const throw() { return ("Index is out of bounds"); }
