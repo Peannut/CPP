@@ -67,6 +67,9 @@
 		"__functional_03": "cpp",
 		"filesystem": "cpp",
 		"*.tcc": "cpp",
-		"clocale": "cpp"
+		"clocale": "cpp",
+		"__tree": "cpp",
+		"list": "cpp",
+		"map": "cpp"
 	}
 }
